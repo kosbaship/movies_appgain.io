@@ -36,4 +36,7 @@ Deadline: 4  days
 
 ## API Read Access Token (v4 auth)
 ## eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MjIxMDBhYjU3NDA5ZWIxMTM2ZTgxMTNmYzhjMTBlYSIsInN1YiI6IjYzYTZlMjczZDdkY2QyMDBkNTgzN2U2NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ejlk6F5-qHWTC5xNAN-uP9509fYpCpD_GHKJZIcbO_s
-##
+
+
+## build 
+flutter pub get && flutter pub run build_runner build --delete-conflicting-outputs

@@ -1,12 +1,6 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-
 class Constants {
   static const developingEnvironment = "assets/environments/.env";
   static const productionEnvironment = "assets/environments/.env.prod";
-
-  static final baseUrl = dotenv.get('BASE_URL');
-  static const apiKeyV3Auth = "622100ab57409eb1136e8113fc8c10ea";
-  static const apiTimeOut = 60000;
 
   static const empty = "";
   static const emptyList = <String>[];
