@@ -1,16 +1,29 @@
 # movies_appgain_io
 
-Mobile Dev Engineer Test Task   APPGAIN.io
+##Mobile Dev Engineer Test Task   APPGAIN.io
 
-## Getting Started
+Design an app to deliver the flowing requirements for A flutter or Native  project (depending on the job requirements )  that work on both platform (Android, IOS):
+·   	Display Splash screen
+·   	Display a list of movies
+·   	Display a movie details page that can be opened from a movie item or a deep link
+·   	Make a deep-link to open your app, also to open the detail screen for a specific movie
+o   Ex: movieapptask://open, movieapptask://details_screen/movie_id
+o   Use Native Deep links and don’t use Firebase or any other plugins  
+·   	Add Push Notification feature using Firebase Cloud notification
+·   	Log Movies API headers, responses only in debug mode
+·   	Log messages when your deep link opened only in debug mode
 
-This project is a starting point for a Flutter application.
+·   	Assets
+o   https://developers.themoviedb.org/3/movies/get-popular-movies
+o   https://developers.themoviedb.org/3/movies/get-movie-details
+o   https://www.themoviedb.org/faq/account
+o   https://developers.themoviedb.org/3/getting-started/introduction
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Task submission
+·   	Send your GitHub project
+·   	Send Examples for deep links
+·   	Send Release APK, debug APK
+·   	Add access to sdk@appgain.io  to your firebase console project
+·   	Please write clean code and use expressive method names
+Deadline: 4  days
