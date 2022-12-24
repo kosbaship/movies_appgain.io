@@ -27,3 +27,13 @@ Task submission
 ·   	Add access to sdk@appgain.io  to your firebase console project
 ·   	Please write clean code and use expressive method names
 Deadline: 4  days
+
+## API Key (v3 auth)
+## 622100ab57409eb1136e8113fc8c10ea
+
+## Example API Request
+## https://api.themoviedb.org/3/movie/550?api_key=622100ab57409eb1136e8113fc8c10ea
+
+## API Read Access Token (v4 auth)
+## eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MjIxMDBhYjU3NDA5ZWIxMTM2ZTgxMTNmYzhjMTBlYSIsInN1YiI6IjYzYTZlMjczZDdkY2QyMDBkNTgzN2U2NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ejlk6F5-qHWTC5xNAN-uP9509fYpCpD_GHKJZIcbO_s
+##
