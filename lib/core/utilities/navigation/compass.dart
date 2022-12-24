@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_appgain_io/core/utilities/app_managers/strings_manager.dart';
-import 'package:movies_appgain_io/features/splash/view/splash_view.dart';
+import 'package:movies_appgain_io/features/popular_movies/presentation/view/movies_screen.dart';
 
 class Compass {
   static const String splashRoute = "/";
-  static const String moviesRoute = "/movies";
+  static const String popularMoviesRoute = "/popular_movies";
   static const String movieDetailsRoute = "/movies_details";
 }
 
@@ -14,8 +14,11 @@ class RouteGenerator {
     switch (settings.name) {
       case Compass.splashRoute:
         return CupertinoPageRoute(
-          builder: (_) => const SplashView(),
-          settings: const RouteSettings(name: 'SplashView'),
+          builder: (_) => const MoviesScreen(),
+        );
+      case Compass.popularMoviesRoute:
+        return CupertinoPageRoute(
+          builder: (_) => const MoviesScreen(),
         );
       default:
         return unDefinedRoute();

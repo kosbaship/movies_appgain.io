@@ -4,7 +4,7 @@ class StringsManager {
   static const failureResponse = "Failure Response";
 
   static const appName = "AppGAIN.io Movies";
-  static const popular = "Popular";
+  static const popular = "Popular Movies";
   static const seeMore = "See More";
   static const topRated = "Top Rated";
   static const genres = "Genres";

@@ -6,6 +6,8 @@ class Constants {
   static const emptyList = <String>[];
   static const falseData = false;
   static const zero = 0;
+  static const doubleZero = 0.0;
+  static const emptyIterable = Iterable.empty();
 
   static const bookOpacity = 0.08;
 

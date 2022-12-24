@@ -14,7 +14,10 @@ import '../features/popular_movies/data/datasource/popular_movies_remote_data_so
     as _i5;
 import '../features/popular_movies/data/repository/popular_movies_repository.dart'
     as _i6;
-import 'injection.dart' as _i7; // ignore_for_file: unnecessary_lambdas
+import '../features/popular_movies/domain/usecases/get_popular_movies_usecase.dart'
+    as _i7;
+import '../features/popular_movies/presentation/movies_bloc.dart' as _i8;
+import 'injection.dart' as _i9; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -40,7 +43,11 @@ Future<_i1.GetIt> $initGetIt(
   gh.lazySingleton<_i6.PopularMoviesRepository>(() =>
       _i6.PopularMoviesRepositoryImpl(
           get<_i5.PopularMoviesRemoteDataSource>()));
+  gh.lazySingleton<_i7.GetPopularMoviesUseCase>(
+      () => _i7.GetPopularMoviesUseCase(get<_i6.PopularMoviesRepository>()));
+  gh.factory<_i8.MoviesBloc>(
+      () => _i8.MoviesBloc(get<_i7.GetPopularMoviesUseCase>()));
   return get;
 }
 
-class _$RegisterModule extends _i7.RegisterModule {}
+class _$RegisterModule extends _i9.RegisterModule {}

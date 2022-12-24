@@ -32,7 +32,7 @@ class DioFactory {
           requestHeader: true,
           requestBody: true,
           responseHeader: true,
-          responseBody: false));
+          responseBody: true));
     }
 
     return dio;

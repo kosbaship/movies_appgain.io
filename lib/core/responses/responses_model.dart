@@ -3,7 +3,20 @@ import 'package:json_annotation/json_annotation.dart';
 part 'responses_model.g.dart';
 
 @JsonSerializable()
-class MovieResponseModel {
+class MovieModelResultResponse {
+  @JsonKey(name: "results")
+  List<MovieModelResponse>? results;
+
+  MovieModelResultResponse(this.results);
+
+  factory MovieModelResultResponse.fromJson(Map<String, dynamic> json) =>
+      _$MovieModelResultResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MovieModelResultResponseToJson(this);
+}
+
+@JsonSerializable()
+class MovieModelResponse {
   @JsonKey(name: "id")
   final int? id;
   @JsonKey(name: "title")
@@ -19,7 +32,7 @@ class MovieResponseModel {
   @JsonKey(name: "release_date")
   final String? releaseDate;
 
-  const MovieResponseModel({
+  const MovieModelResponse({
     this.id,
     this.title,
     this.backdropPath,
@@ -29,8 +42,8 @@ class MovieResponseModel {
     this.releaseDate,
   });
 
-  factory MovieResponseModel.fromJson(Map<String, dynamic> json) =>
-      _$MovieResponseModelFromJson(json);
+  factory MovieModelResponse.fromJson(Map<String, dynamic> json) =>
+      _$MovieModelResponseFromJson(json);
 
-  Map<String, dynamic> toJson() => _$MovieResponseModelToJson(this);
+  Map<String, dynamic> toJson() => _$MovieModelResponseToJson(this);
 }

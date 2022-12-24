@@ -13,5 +13,5 @@ abstract class AppServiceClient {
   factory AppServiceClient(Dio dio) = _AppServiceClient;
 
   @GET(ApiConstance.popularMoviesPath)
-  Future<List<MovieResponseModel>> getPopularMovies();
+  Future<MovieModelResultResponse> getPopularMovies();
 }

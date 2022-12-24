@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_appgain_io/core/utilities/app_managers/strings_manager.dart';
 import 'package:movies_appgain_io/core/utilities/navigation/compass.dart';
 
 class MoviesApp extends StatefulWidget {
@@ -14,8 +15,6 @@ class MoviesApp extends StatefulWidget {
 }
 
 class _MoviesAppState extends State<MoviesApp> {
-  late final ThemeMode _themeMode = ThemeMode.system;
-
   @override
   void initState() {
     super.initState();
@@ -30,8 +29,10 @@ class _MoviesAppState extends State<MoviesApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: _themeMode,
-      initialRoute: Compass.splashRoute,
+      title: StringsManager.appName,
+      theme: ThemeData.dark()
+          .copyWith(scaffoldBackgroundColor: Colors.grey.shade900),
+      initialRoute: Compass.popularMoviesRoute,
       onGenerateRoute: RouteGenerator.getRoute,
     );
   }

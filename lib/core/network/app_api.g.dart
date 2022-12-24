@@ -19,13 +19,13 @@ class _AppServiceClient implements AppServiceClient {
   String? baseUrl;
 
   @override
-  Future<List<MovieResponseModel>> getPopularMovies() async {
+  Future<MovieModelResultResponse> getPopularMovies() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<MovieResponseModel>>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<MovieModelResultResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -37,10 +37,7 @@ class _AppServiceClient implements AppServiceClient {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    var value = _result.data!
-        .map((dynamic i) =>
-            MovieResponseModel.fromJson(i as Map<String, dynamic>))
-        .toList();
+    final value = MovieModelResultResponse.fromJson(_result.data!);
     return value;
   }
 
