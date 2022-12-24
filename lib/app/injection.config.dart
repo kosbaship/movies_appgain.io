@@ -38,11 +38,10 @@ Future<_i1.GetIt> $initGetIt(
   );
   gh.lazySingleton<_i4.AppServiceClient>(
       () => _i4.AppServiceClient(get<_i3.Dio>()));
-  gh.lazySingleton<_i5.PopularMoviesRemoteDataSource>(
-      () => _i5.PopularMoviesRemoteDataSourceImpl(get<_i4.AppServiceClient>()));
+  gh.lazySingleton<_i5.PopularMoviesDataSource>(
+      () => _i5.PopularMoviesRemoteImpl(get<_i4.AppServiceClient>()));
   gh.lazySingleton<_i6.PopularMoviesRepository>(() =>
-      _i6.PopularMoviesRepositoryImpl(
-          get<_i5.PopularMoviesRemoteDataSource>()));
+      _i6.PopularMoviesRepositoryImpl(get<_i5.PopularMoviesDataSource>()));
   gh.lazySingleton<_i7.GetPopularMoviesUseCase>(
       () => _i7.GetPopularMoviesUseCase(get<_i6.PopularMoviesRepository>()));
   gh.factory<_i8.MoviesBloc>(

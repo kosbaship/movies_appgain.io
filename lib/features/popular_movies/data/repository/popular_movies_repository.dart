@@ -12,7 +12,7 @@ abstract class PopularMoviesRepository {
 
 @LazySingleton(as: PopularMoviesRepository)
 class PopularMoviesRepositoryImpl extends PopularMoviesRepository {
-  final PopularMoviesRemoteDataSource remoteDataSource;
+  final PopularMoviesDataSource remoteDataSource;
 
   PopularMoviesRepositoryImpl(this.remoteDataSource);
 

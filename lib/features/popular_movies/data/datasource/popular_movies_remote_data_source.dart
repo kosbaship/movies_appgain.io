@@ -2,15 +2,15 @@ import 'package:injectable/injectable.dart';
 import 'package:movies_appgain_io/core/network/app_api.dart';
 import 'package:movies_appgain_io/core/responses/responses_model.dart';
 
-abstract class PopularMoviesRemoteDataSource {
+abstract class PopularMoviesDataSource {
   Future<MovieModelResultResponse> getPopularMovies();
 }
 
-@LazySingleton(as: PopularMoviesRemoteDataSource)
-class PopularMoviesRemoteDataSourceImpl extends PopularMoviesRemoteDataSource {
+@LazySingleton(as: PopularMoviesDataSource)
+class PopularMoviesRemoteImpl extends PopularMoviesDataSource {
   final AppServiceClient _appServiceClient;
 
-  PopularMoviesRemoteDataSourceImpl(this._appServiceClient);
+  PopularMoviesRemoteImpl(this._appServiceClient);
 
   @override
   Future<MovieModelResultResponse> getPopularMovies() async =>

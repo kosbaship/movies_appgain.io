@@ -56,7 +56,6 @@ class PopularComponent extends StatelessWidget {
                                 child: Container(
                                   margin: const EdgeInsets.only(bottom: 8.0),
                                   height: 170.0,
-                                  width: 120.0,
                                   decoration: BoxDecoration(
                                     color: Colors.black,
                                     borderRadius: BorderRadius.circular(8.0),
